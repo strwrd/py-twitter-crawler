@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  twitter-crawler-mysql:
+    image: mysql:8
+    container_name: twitter-crawler-mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: secret
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: secret

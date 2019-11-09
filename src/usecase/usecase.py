@@ -1,8 +1,12 @@
+import os
+
+
 class Usecase:
 
     @classmethod
     def do_crawling(cls, twitter, mysql):
-        cursor = twitter.create_cursor("prabowo -filter:retweets")
+        print(os.getenv("QUERY"))
+        cursor = twitter.create_cursor(os.getenv("QUERY"))
 
         try:
             print("Start Crawling...")
